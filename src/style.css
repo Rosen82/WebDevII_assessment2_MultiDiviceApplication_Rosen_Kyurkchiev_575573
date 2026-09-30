@@ -1,0 +1,436 @@
+/* --- Global Reset & Professional Theme --- */
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+  color: #333333;
+  line-height: 1.5;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px 20px;
+}
+
+/* --- Professional Header & Navigation Bar --- */
+.site-header {
+  background-color: #0b2545;
+  color: #ffffff;
+  padding: 30px 40px;
+  border-bottom: 5px solid #134074;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  border-radius: 0 0 8px 8px;
+}
+
+.site-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+}
+
+.site-header p {
+  margin: 0;
+  color: #8da9c4;
+  font-size: 1.05rem;
+}
+
+/* --- Header Account Bar & Auth Controls --- */
+.account-bar {
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.logged-in-info {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+.auth-trigger-group {
+  display: flex;
+  gap: 12px;
+}
+
+/* --- Stylish Buttons --- */
+.nav-btn {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: #ffffff;
+}
+
+.login-trigger-btn {
+  background-color: transparent;
+}
+
+.register-trigger-btn {
+  background-color: #ffffff;
+  color: #0b2545;
+  border: none;
+}
+
+.register-trigger-btn:hover {
+  background-color: #e2e8f0;
+}
+
+.logout-btn {
+  background-color: #bc4749;
+  border-color: #bc4749;
+}
+
+.logout-btn:hover {
+  background-color: #a73739;
+}
+
+/* --- Search Bar --- */
+.search-bar-container {
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 2px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #134074;
+}
+
+/* --- Activity Cards Grid --- */
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 24px;
+}
+
+.activity-card {
+  background: #ffffff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #e2e8f0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.activity-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.card-img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* --- Activity Badges & Meta Details --- */
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.badge {
+  background-color: #e0f2fe;
+  color: #0369a1;
+  padding: 3px 8px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.spots-badge {
+  background-color: #dcfce7;
+  color: #15803d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.spots-badge.sold-out {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.card-content h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.15rem;
+  color: #0b2545;
+}
+
+.card-content p {
+  color: #64748b;
+  font-size: 0.9rem;
+  margin: 0 0 20px 0;
+  flex-grow: 1;
+}
+
+/* --- Activity Action Buttons --- */
+.book-btn {
+  background-color: #134074;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  text-align: center;
+  transition: background-color 0.2s;
+}
+
+.book-btn:hover:not(:disabled) {
+  background-color: #0b2545;
+}
+
+.book-btn:disabled {
+  background-color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+/* --- Booking & Modal Overlays --- */
+.booking-view {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid #e2e8f0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(11, 37, 69, 0.6);
+  backdrop-filter: blur(3px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-card {
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  border-top: 4px solid #134074;
+}
+
+.modal-card h3 {
+  margin-top: 0;
+  color: #0b2545;
+}
+
+.modal-card p {
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* --- Booking & Modal Forms --- */
+.booking-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+.booking-form input[type="text"], 
+.booking-form input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 20px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.booking-form input:focus {
+  outline: none;
+  border-color: #134074;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.submit-booking-btn {
+  background-color: #134074;
+  color: white;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  flex: 1;
+}
+
+.submit-booking-btn:hover {
+  background-color: #0b2545;
+}
+
+.cancel-btn {
+  background-color: #e2e8f0;
+  color: #475569;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cancel-btn:hover {
+  background-color: #cbd5e1;
+}
+
+.auth-switch-prompt {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #64748b;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 15px;
+}
+
+.link-btn {
+  background: none;
+  border: none;
+  color: #134074;
+  text-decoration: underline;
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0;
+}
+
+/* --- Date Selection Controls --- */
+.date-options {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0 25px 0;
+  flex-wrap: wrap;
+}
+
+.date-chip {
+  border: 1px solid #cbd5e1;
+  padding: 8px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  background-color: #f8fafc;
+  transition: all 0.2s;
+}
+
+.date-chip.selected {
+  border-color: #134074;
+  background-color: #e0f2fe;
+  color: #0369a1;
+}
+
+.date-chip input[type="radio"] {
+  display: none;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  color: #134074;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  padding: 0;
+}
+
+.back-btn:hover {
+  text-decoration: underline;
+}
+
+/* --- Status Messages & Feedback --- */
+.success-msg {
+  background-color: #dcfce7;
+  color: #15803d;
+  padding: 12px;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.account-note {
+  background: #f8fafc;
+  border-left: 4px solid #134074;
+  padding: 10px 15px;
+  border-radius: 4px;
+  margin: 15px 0;
+}
+
+.account-note.warning {
+  border-left-color: #b91c1c;
+  background-color: #fef2f2;
+  color: #991b1b;
+}
+
+/* --- User Bookings List --- */
+.my-bookings-list {
+  list-style: none;
+  padding: 0;
+}
+
+.booking-item {
+  background: #f8fafc;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  border-left: 4px solid #134074;
+  border: 1px solid #e2e8f0;
+}
